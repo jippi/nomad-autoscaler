@@ -38,7 +38,7 @@ type Source struct {
 }
 
 // NewNomadSource returns a new Nomad policy source.
-func NewNomadSource(log hclog.Logger, nomad *api.Client, config *policy.ConfigDefaults) policy.Source {
+func NewNomadSource(log hclog.Logger, nomad *api.Client, config *policy.ConfigDefaults) *Source {
 	return &Source{
 		log:    log.Named("nomad_policy_source"),
 		nomad:  nomad,
